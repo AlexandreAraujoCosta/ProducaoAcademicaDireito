@@ -1,8 +1,7 @@
 import dsd
 
-# proximo_href = 'https://scholar.google.com/citations?hl=en&view_op=search_authors&mauthors=direito+OR+label%3Adireito+OR+label%3Adireito_constitucional+OR+label%3Afilosofia_do_direito+OR+label%3Adireito_tributario+OR+label%3Adireito_publico+OR+label%3Adireito_penal'
+proximo_href = 'https://scholar.google.com/citations?hl=en&view_op=search_authors&mauthors=direito+OR+label%3Adireito+OR+label%3Adireito_constitucional+OR+label%3Afilosofia_do_direito+OR+label%3Adireito_tributario+OR+label%3Adireito_publico+OR+label%3Adireito_penal'
 
-proximo_href = 'https://scholar.google.com/citations?hl=en&view_op=search_authors&mauthors=direito+OR+label%3Adireito+OR+label%3Adireito_constitucional+OR+label%3Afilosofia_do_direito+OR+label%3Adireito_tributario+OR+label%3Adireito_publico+OR+label%3Adireito_penal&after_author=S_aWANX___8J&astart=0'
 html = dsd.get(proximo_href)
 
 lista_paginas = []
@@ -10,8 +9,8 @@ lista_total = []
 total_citacoes = '2'
 bottom = False
 
-# dsd.limpar_arquivo('pesquisadores.txt')
-# dsd.write_csv_header('pesquisadores.txt', 'nome, user, href, affiliation, labels, total_citacoes, citacoes_total, citacoes_desde_2016, i10_total, i10_desde_2016, hindex_total, hindex_desde_2016')
+dsd.limpar_arquivo('pesquisadores.txt')
+dsd.write_csv_header('pesquisadores.txt', 'nome, user, href, affiliation, labels, total_citacoes, citacoes_total, citacoes_desde_2016, i10_total, i10_desde_2016, hindex_total, hindex_desde_2016')
 dsd.limpar_arquivo('labels.txt')
 labels_total = []
 parar = False
